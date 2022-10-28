@@ -18,7 +18,6 @@ try:
     # second request to get project id"
     r = rq.get('https://api.clockify.me/api/v1/workspaces/{}/projects'.format(workspace_id), headers=data, params={"name":project_name})
     project_id = r.json()[0].get("id")
-    print(json.dumps(r.json(), indent = 4))
     
     # third and final request to get task entries
     r = rq.get('https://api.clockify.me/api/v1/workspaces/{}/projects/{}/tasks'.format(workspace_id, project_id), headers=data, params={})
