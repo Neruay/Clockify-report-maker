@@ -67,7 +67,7 @@ try:
             print(group_list[group][1][time_entry][0], "-",
                   group_list[group][1][time_entry][1], end="\n")
 
-    # building "All tasks, time entries and task status" report
+    # building "All tasks, time spent and task status" report
     print("\nAll tasks, time entries and task status\n")
     for entry in task_entries:
         print("{} {} - {}".format(entry[0], entry[1], entry[2]), end="\n")
